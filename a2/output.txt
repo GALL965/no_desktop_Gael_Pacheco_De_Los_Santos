@@ -1,7 +1,0 @@
-Tabla 1: Columna1
-Media: 550.6
-desviacion estandar: 572.026844746915
-
-Table 1: Column 2
-Media: 60.32000000000001
-desviacion estandar: 62.25583060601187

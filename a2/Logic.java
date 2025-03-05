@@ -1,23 +1,24 @@
+import java.util.List;
+
 public class Logic {
-    public double calculateMean(double[] data) {
-        double sum = 0;
-        for (double num : data) {
-            sum += num;
+    public static int countMethods(List<String> lines) {
+        int methodCount = 0;
+        for (String line : lines) {
+            if (line.matches(".*\\b(public|private|protected)\\b.*\\(.*\\).*")) {
+                methodCount++;
+            }
         }
-
-
-
-        return sum / data.length;
+        return methodCount;
     }
-  public double calculateStdDev(double[] data, double mean) {
-        double sum = 0;
-        for (double num : data) {
-            sum += Math.pow(num - mean, 2);
+
+    public static int countLines(List<String> lines) {
+        int count = 0;
+        for (String line : lines) {
+            if (!line.trim().isEmpty() && !line.trim().startsWith("//")) {
+                count++;
+            }
         }
-
-
-
-
-        return Math.sqrt(sum / (data.length - 1));
+        return count;
     }
 }
+
