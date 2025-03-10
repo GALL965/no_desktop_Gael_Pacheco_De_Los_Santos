@@ -23,13 +23,13 @@ public class main {
                 String protein = Proteina.traducirProteina(frame);
                 if (protein.length() == 75) {
                     orfCount++;
-                    bw.write("ORF con 75 aminoácidos (" + orfCount + "):\n");
+                    bw.write("ORF con 75 aminoacidos (" + orfCount + "):\n");
                     bw.write("- Secuencia ARN: " + frame + "\n");
-                    bw.write("- Longitud nucleótidos: " + frame.length() + "\n");
-                    bw.write("- Proteína: " + protein + " (75 aa)\n\n");
+                    bw.write("- Longitud nucleotidos: " + frame.length() + "\n");
+                    bw.write("- Proteina " + protein + " (75)\n\n");
                 }
             }
-            bw.write("Proceso completado.\n");
+            bw.write("roceso completado\n");
         } catch (IOException e) {
             System.err.println("Error al escribir el archivo: " + e.getMessage());
         }
